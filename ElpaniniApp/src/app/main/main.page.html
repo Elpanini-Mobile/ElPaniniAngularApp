@@ -1,0 +1,55 @@
+<ion-content>
+  <div class="header">
+    <h1>Menu</h1>
+  </div>
+      <ion-searchbar class="textp" [(ngModel)]="userFilter.title" placeholder="filter hier op broodjes">
+      </ion-searchbar>
+  <ion-grid class="contentm">
+    <h1>Categorieen</h1>
+    <ion-row class="cards-grid">
+      <ion-col>
+        <ion-list>
+          <div class="checkboxes">
+            <li><input type="checkbox" id="halal" name="halal" [(ngModel)]="filter.halal"
+
+                (ngModelChange)="filterchange(filter.halal, 'halal')" />
+              <label for="halal"><img src="./assets/icon/category/halal.png" /></label>
+            </li>
+            <li>
+              <input type="checkbox" id="kosher" name="kosher" [(ngModel)]="filter.kosher"
+                (ngModelChange)="filterchange(filter.kosher, 'kosher')" />
+              <label for="kosher"><img src="./assets/icon/category/kosher.png" /></label>
+            </li>
+            <li>
+              <input type="checkbox" id="vegan" name="vegan" [(ngModel)]="filter.vegan"
+                (ngModelChange)="filterchange(filter.vegan, 'vegan')" />
+              <label for="vegan"><img src="./assets/icon/category/vegan.png" /></label>
+            </li>
+            <li>
+              <input type="checkbox" id="glutenvrij" name="glutenvrij" [(ngModel)]="filter.glutenvrij"
+                (ngModelChange)="filterchange(filter.glutenvrij, 'glutenvrij')" />
+              <label for="glutenvrij"><img src="./assets/icon/category/glutenvrij.png" /></label>
+            </li>
+          </div>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="contentm">
+    <h1 class="tit">Broodjes</h1>
+        <div class="broodjes" >
+          <div class="ion-card" (click)="detailPage(brood.id)" *ngFor="let brood of FilteredBroodjeslijst | filterBy: userFilter">
+            <ion-img [src]="brood.foto"></ion-img>
+            <div class="ion-card-content">
+              <h2 class="ion-title">{{brood.title}}</h2>
+              <h3 class="ion-subtitle">€ {{brood.price|number:'1.2'}}</h3>
+              <ion-buttons>
+                <ion-button>
+                  <ion-icon name="information-circle-outline"></ion-icon>
+                </ion-button>
+              </ion-buttons>
+            </div>
+          </div>
+        </div>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,79 @@
+<ion-header class="header">
+  <ion-toolbar>
+    <button routerLink="/tabs/main">
+      <ion-icon size="large" name="arrow-back-circle-outline"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <div class="container">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Add new sandwich
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">
+            <h2>title</h2>
+          </ion-label>
+          <ion-input [(ngModel)]="title"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">
+            <h2>price</h2>
+          </ion-label>
+          <ion-input [(ngModel)]="price"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">
+            <h2>description</h2>
+          </ion-label>
+          <ion-textarea rows="3" [(ngModel)]="description"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked">
+            <h2>image</h2>
+          </ion-label>
+          <ion-input [(ngModel)]="foto"></ion-input>
+        </ion-item>
+        <div style="color:red" *ngIf="error_msg.length !== 0">
+          {{error_msg}}
+        </div>
+        <div>
+          <ion-button (click)="add()">{{btnAdd}}</ion-button>
+          <ion-button (click)="update()">{{btnUpdate}}</ion-button>
+          <ion-button (click)="reset()">Reset</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+    <h1>All sandwiches</h1>
+    <div class="cart-items" *ngFor="let x of brood; let index = index">
+      <ion-card mode="ios">
+        <ion-card-content>
+          <div class="img">
+            <ion-img [src]="x.foto"></ion-img>
+          </div>
+          <div class="price">
+            <p>€ {{x.price| number:'1.2'}}</p>
+          </div>
+          <div class="info">
+            <p><strong>{{x.title}}</strong></p>
+            <p>{{x.description}}</p>
+          </div>
+        </ion-card-content>
+        <ion-footer>
+          <ion-toolbar color="translucent">
+            <ion-button class="btns" (click)="edit(x, index)">
+              <ion-icon name="create-outline"></ion-icon>
+            </ion-button>
+            <ion-button class="btns" (click)="delete(index)">
+              <ion-icon name="trash-outline"></ion-icon>
+            </ion-button>
+          </ion-toolbar>
+        </ion-footer>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,60 @@
+ion-content {
+  --background: darkgoldenrod;
+  position: relative;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: darkgoldenrod;
+}
+
+.ion-card {
+  background: #f1f1ed;
+  border-radius: 2.8rem 2.8rem 0 0;
+  bottom: 0;
+  height: 80%;
+  position: absolute;
+  padding: 1.8rem;
+  width: 100%;
+}
+
+.image {
+  position: absolute;
+  top: -4rem;
+  transform: translateX(50%);
+  right: 50%;
+}
+
+.title,
+p {
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+}
+
+.description {
+  margin-bottom: 1.2rem;
+
+  p {
+    color: rgb(0, 0, 0);
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+}
+
+ion-button {
+  --background: #b8860b;
+  color: #fff;
+}
+.addCart{
+  height: 40px;
+  width: inherit;
+  --background: #b8860b;
+  --border-radius: 13px;
+  color: #fff;
+  align-items: center;
+}

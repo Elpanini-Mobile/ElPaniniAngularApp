@@ -1,0 +1,17 @@
+ion-tab-bar {
+  background-color: antiquewhite;
+  padding: 10px 0;
+
+  ion-tab-button {
+    background-color: antiquewhite;
+
+    ion-icon {
+      font-size: 1.7rem;
+    }
+  }
+}
+.badge{
+  position: absolute;
+  right: 20%;
+  top: 13%;
+}

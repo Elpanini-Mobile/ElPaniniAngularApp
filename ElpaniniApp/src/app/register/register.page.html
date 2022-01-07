@@ -1,0 +1,42 @@
+<ion-header class="header">
+  <ion-button class="back" routerLink="/home">
+    <ion-icon size="large" name="arrow-back-circle-outline"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content>
+  <div class="container">
+    <form id="form" [formGroup]="registerForm" (ngSubmit)="submitForm()" novalidate>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>
+          Register
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          <ion-input class="inputTekst" placeholder="username" formControlName="username"></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="isSubmitted && errorControl.username.errors?.pattern">
+          Valid username is required.
+        </span>
+        <ion-item>
+          <ion-input class="inputTekst" placeholder="Email" formControlName="email"></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
+          Valid Email is required.
+        </span>
+        <ion-item>
+          <ion-input class="inputTekst" placeholder="Passwoord" formControlName="password" type="password"></ion-input>
+        </ion-item>
+        <span class="error" *ngIf="isSubmitted && errorControl.password.errors?.required">
+          Password is required.
+        </span>
+        <div class="footer">
+          <ion-button class="register" type="submit" (click)="presentAlert()">Register</ion-button>
+          <span> Al een account bij ons? <a href="#" routerLink="/login"> Login</a></span>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </form>
+</div>
+</ion-content>

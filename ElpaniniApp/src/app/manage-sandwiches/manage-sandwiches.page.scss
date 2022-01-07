@@ -1,0 +1,124 @@
+ion-content {
+  --ion-background-color: rgb(226, 226, 213);
+  font-family: Arial, Helvetica, sans-serif;
+}
+ion-toolbar {
+  --background: antiquewhite;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  background: antiquewhite;
+}
+.container {
+  background-color: rgb(226, 226, 213);
+}
+
+ion-item {
+  --border-width: 0;
+  --inner-border-width: 0;
+  margin-bottom: 15px;
+  --ion-item-background: transparent;
+}
+
+ion-item>ion-input {
+  border-radius: 13px;
+  border: 1px solid #b8860b;
+  font-size: 15px;
+  color: #555b5b;
+  --padding-start: 15px;
+}
+
+ion-item>ion-textarea {
+  border-radius: 13px;
+  border: 1px solid #b8860b;
+  font-size: 15px;
+  color: #555b5b;
+  --padding-start: 15px;
+}
+
+ion-list {
+  --border-width: 0;
+  --inner-border-width: 0;
+  margin-bottom: 15px;
+  --ion-item-background: transparent;
+}
+
+p {
+  color: #1d1d1d;
+}
+
+h2 {
+  color: #1d1d1d;
+  font-weight: 600;
+  margin: 0px 0px 12px;
+}
+
+ion-label {
+  --ion-color: black;
+}
+button{
+  background:antiquewhite;
+  color: darkgoldenrod;
+}
+ion-button {
+  --background: #b8860b;
+  --border-radius: 13px;
+  color: #fff;
+}
+
+h1 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #1d1d1d;
+}
+
+textarea {
+  resize: none;
+  width: 255px;
+  height: 80px;
+  font-size: 15px;
+  border-radius: 13px;
+  color: #1d1d1d;
+  border: 1px solid #b8860b;
+  padding: 5px 7px 5px 5px;
+  background-color: rgb(226, 226, 213);
+}
+
+//tital van ioncard --> Welkom...
+ion-card-title {
+  color: #000000;
+  font-size: 28px;
+}
+
+//https://stackoverflow.com/questions/52007818/how-can-i-remove-border-in-ion-card-in-ionic
+ion-card {
+  box-shadow: none !important;
+  text-align: center;
+  background: transparent;
+}
+
+//boven margin geven voor de contentcard
+ion-card-content {
+  margin-top: 3px;
+}
+// ion-card
+ion-card {
+  background: #f1f1ed;
+  border-radius: 2rem;
+  padding: 1.5rem;
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  color: black;
+}
+ion-icon{
+  border-radius: 50% !important;
+}
+.quantity{
+  float: right;
+  font-size: 1rem;
+}

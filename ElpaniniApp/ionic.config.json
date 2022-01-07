@@ -1,0 +1,8 @@
+{
+  "name": "ElpaniniApp",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

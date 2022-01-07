@@ -1,0 +1,24 @@
+<ion-header class="header">
+  <ion-button routerLink="/tabs/main">
+    <ion-icon size="large" name="arrow-back-circle-outline"></ion-icon>
+  </ion-button>
+</ion-header>
+<ion-content>
+  <div class="ion-card" *ngIf="information">
+    <div class="image">
+      <ion-img [src]="information.foto"></ion-img>
+    </div>
+    <div class="ion-card-content">
+      <div class="ion-card-title">
+        <h1 class="title">{{information.title}}</h1>
+        <p class="prijs">€ {{information.price}}</p>
+      </div>
+    </div>
+    <div class="description">
+      <h1>Description</h1>
+      <p>{{information.description}}</p>
+    </div>
+    <ion-button class="addCart" (click)="addToCart(information)" routerLink="/tabs/cart">Add sandwich to cart
+    </ion-button>
+  </div>
+</ion-content>
