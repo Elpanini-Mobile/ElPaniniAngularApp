@@ -36,8 +36,8 @@ export class ManageSandwichesPage implements OnInit {
   };
 
   error_msg = '';
-  btnAdd = 'Add';
-  btnUpdate = 'Update';
+  btnAdd = 'Voeg toe';
+  btnUpdate = 'Wijzig';
   edit_index = -1;
 
   constructor(private alert: AlertController, public loading: LoadingController, private http: HttpClient, private toast: ToastController) {
@@ -68,22 +68,22 @@ export class ManageSandwichesPage implements OnInit {
   }
   async add() {
     if (this.title == this.broodje.title) {
-      this.showToast("Sandwich already exist", "danger");
+      this.showToast("Broodje bestaat al", "danger");
     } else if (this.title.length == 0) {
-      this.error_msg = "Please enter title";
-      this.showToast("Please enter title", "danger");
+      this.error_msg = "Vul titel in";
+      this.showToast("Vul titel in", "danger");
     } else if (this.price.length == 0) {
-      this.error_msg = "Please enter price";
-      this.showToast("Please enter price", "danger");
+      this.error_msg = "Vul prijs in";
+      this.showToast("Vul prijs in", "danger");
     } else if (this.description.length == 0) {
-      this.error_msg = "Please enter description";
-      this.showToast("Please enter description", "danger");
+      this.error_msg = "Vul beschrijving in";
+      this.showToast("Vul beschrijving in", "danger");
     } else if (this.foto.length == 0) {
-      this.error_msg = "Please enter foto";
-      this.showToast("Please enter foto", "danger");
+      this.error_msg = "Vul foto in";
+      this.showToast("Vul foto in", "danger");
     } else {
       const loading = await this.loading.create({
-        message: 'Saving. Please wait..',
+        message: 'Saving. even geduld..',
       });
       await loading.present();
       this.broodje.title = this.title;
@@ -103,12 +103,12 @@ export class ManageSandwichesPage implements OnInit {
 
   async update() {
     if (this.title.length == 0 || this.price.length == 0 || this.description.length == 0) {
-      this.error_msg = "Please select a sadwich";
-      this.showToast("Please select a sadwich", "danger");
+      this.error_msg = "Kies een broodje";
+      this.showToast("Kies een broodje", "danger");
     }
     else {
       const loading = await this.loading.create({
-        message: 'Updating. Please wait..',
+        message: 'Wordt bijgewerkt. even geduld aub..',
       });
 
       await loading.present();
@@ -140,7 +140,7 @@ export class ManageSandwichesPage implements OnInit {
 
   async remove(x) {
     const loading = await this.loading.create({
-      message: 'Deleting. Please wait..',
+      message: 'Verwijderen. Even geduld...',
     });
     await loading.present();
     console.log(x);
@@ -158,17 +158,17 @@ export class ManageSandwichesPage implements OnInit {
   async delete(index) {
     const alert = await this.alert.create({
       header: 'Delete',
-      message: 'Do you want to delete?',
+      message: 'Wilt u deze verwijderen?',
       buttons: [
         {
-          text: 'Yes',
+          text: 'Ja',
           handler: () => {
             this.remove(this.brood[index].id);
             this.showToast("Deleted Product", "success");
           }
         },
         {
-          text: 'No',
+          text: 'Nee',
           handler: () => {
             console.log('Confirm Okay');
           }

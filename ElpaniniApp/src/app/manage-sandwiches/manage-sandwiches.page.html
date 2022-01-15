@@ -10,31 +10,31 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>
-          Add new sandwich
+          Voeg een nieuwe broodje
         </ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-item>
           <ion-label position="stacked">
-            <h2>title</h2>
+            <h2>titel</h2>
           </ion-label>
           <ion-input [(ngModel)]="title"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">
-            <h2>price</h2>
+            <h2>prijs</h2>
           </ion-label>
           <ion-input [(ngModel)]="price"></ion-input>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">
-            <h2>description</h2>
+            <h2>beschrijving</h2>
           </ion-label>
           <ion-textarea rows="3" [(ngModel)]="description"></ion-textarea>
         </ion-item>
         <ion-item>
           <ion-label position="stacked">
-            <h2>image</h2>
+            <h2>foto</h2>
           </ion-label>
           <ion-input [(ngModel)]="foto"></ion-input>
         </ion-item>
@@ -48,7 +48,7 @@
         </div>
       </ion-card-content>
     </ion-card>
-    <h1>All sandwiches</h1>
+    <h1>Alle broodjes</h1>
     <div class="cart-items" *ngFor="let x of brood; let index = index">
       <ion-card mode="ios">
         <ion-card-content>

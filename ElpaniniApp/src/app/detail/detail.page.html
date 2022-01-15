@@ -15,10 +15,12 @@
       </div>
     </div>
     <div class="description">
-      <h1>Description</h1>
+      <h1>Beschrijving</h1>
       <p>{{information.description}}</p>
     </div>
+    <div *ngIf="user.role === 'user'">
     <ion-button class="addCart" (click)="addToCart(information)" routerLink="/tabs/cart">Add sandwich to cart
     </ion-button>
+  </div>
   </div>
 </ion-content>

@@ -20,6 +20,7 @@ export class DetailPage implements OnInit {
   information = null;
   result: Observable<Broodje>;
   broodjes: Broodje[] = [];
+  user: any = JSON.parse(sessionStorage.getItem('UserData'));
 
   constructor(private broodjeService: BroodjeService, private activatedRoute: ActivatedRoute, private cartService: CartService, private toast: ToastController) {
   }
@@ -39,7 +40,6 @@ export class DetailPage implements OnInit {
       position: 'top',
     });
     toast.present();
-    location.reload();
   }
   addToCart(brood: Broodje)
   {

@@ -11,11 +11,11 @@
     <div class="wrap">
       <div class="rij1">
         <ion-item lines="full">
-          <ion-label class="labels" position="floating">Username</ion-label>
+          <ion-label class="labels" position="floating">Gebruikersnaam</ion-label>
           <ion-input formControlName="username" type="text" [disabled]="isDisabled" required></ion-input>
         </ion-item>
         <span class="error ion-padding" *ngIf="isSubmitted && errorControl.username.errors?.required">
-          Username is required.
+          Gebruikersnaam is vereist.
         </span>
         <span class="error ion-padding" *ngIf="isSubmitted && errorControl.username.errors?.minlength">
           Username should be min 2 chars long.
@@ -26,29 +26,29 @@
           <ion-input formControlName="email" type="email" [disabled]="true" required></ion-input>
         </ion-item>
         <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.required">
-          Email is required.
+          Email is vereist.
         </span>
         <span class="error ion-padding" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
-          Please provide a valid email.
+          Geef een geldig email adres.
         </span>
 
         <ion-item lines="full">
-          <ion-label class="labels" position="floating">Password</ion-label>
+          <ion-label class="labels" position="floating">Paswoord</ion-label>
           <ion-input formControlName="password" type="text" [disabled]="isDisabled" required></ion-input>
         </ion-item>
         <span class="error ion-padding" *ngIf="isSubmitted && errorControl.password.errors?.required">
-          Password is required.
+          Paswoord is required.
         </span>
       </div>
     </div>
     <ion-row>
       <ion-col>
         <ion-button type="submit" expand="block">Submit</ion-button>
-        <ion-button (click)="editFields()">Edit</ion-button>
+        <ion-button (click)="editFields()">Wijzig</ion-button>
       </ion-col>
     </ion-row>
   </form>
   <ion-button class="logout" fill="clear" value="Log out" (click)="logout()">
-    Log out
+    Log uit
   </ion-button>
 </ion-content>

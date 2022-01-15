@@ -24,16 +24,16 @@
               <ion-input class="inputTekst" placeholder="Email" formControlName="email"></ion-input>
             </ion-item>
             <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
-              Valid Email is required.
+              Valid Email is vereist.
             </span>
           </div>
 
           <div class="inputPassword">
             <ion-item>
-              <ion-input class="inputTekst" placeholder="Passwoord" formControlName="password" type="password"></ion-input>
+              <ion-input class="inputTekst" placeholder="Paswoord" formControlName="password" type="password"></ion-input>
             </ion-item>
             <span class="error" *ngIf="isSubmitted && errorControl.password.errors?.required">
-              Password is required.
+              Paswoord is vereist.
             </span>
           </div>
           <a href="#" routerLink="/forgetpassword">Passwoord vergeten</a>

@@ -71,7 +71,7 @@ export class ProfilePage implements OnInit {
   submitForm(): void {
     this.isSubmitted = true;
     if (!this.ionicForm.valid) {
-      console.log('Please provide all the required values!');
+      console.log('Geef alle vereiste waarden op!');
     } else {
       const UserData = JSON.parse(sessionStorage.getItem('UserData'));
       this.user.id = UserData.id;
@@ -84,7 +84,7 @@ export class ProfilePage implements OnInit {
         console.log(JSON.stringify(this.user));
         this.router.navigate(['tabs/main']);
         this.isDisabled = true;
-        this.showToast("Profile information changed", "secondary");
+        this.showToast("Profielgegevens gewijzigd", "secondary");
       });
     }
   }
@@ -106,7 +106,8 @@ export class ProfilePage implements OnInit {
 
   logout() {
     this.router.navigate(['/home']);
-    sessionStorage.clear();
     localStorage.clear();
+    sessionStorage.clear();
   }
 }
+

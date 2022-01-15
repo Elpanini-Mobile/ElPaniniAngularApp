@@ -3,7 +3,7 @@
     <ion-tab-button tab="main">
       <ion-icon name="apps-outline"></ion-icon>
     </ion-tab-button>
-    <ion-tab-button tab="cart">
+    <ion-tab-button tab="cart" *ngIf="user.role === 'user'">
       <ion-icon name="cart-outline"></ion-icon>
       <div class="badge">{{cartService.totalCartItem()}}</div>
     </ion-tab-button>

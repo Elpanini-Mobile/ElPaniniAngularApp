@@ -60,7 +60,7 @@ export class LoginPage implements OnInit {
   submitForm(): boolean {
     this.isSubmitted = true;
     if (!this.loginForm.valid) {
-      console.log('Please provide all the required values!');
+      console.log('Geef alle vereiste waarden op!');
       return false;
     } else {
       this.http.post("https://samysah.be/php/api/gebruikers/login.php" + '?email=' + this.errorControl.email.value + '&password=' + this.errorControl.password.value, { withCredentials: true })

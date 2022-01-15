@@ -57,7 +57,7 @@ export class RegisterPage implements OnInit {
     this.isSubmitted = true;
     // stop here if form is invalid
     if (!this.registerForm.valid) {
-      console.log('Please provide all the required values!');
+      console.log('Geef alle vereiste waarden op!');
       return false;
     }
     //True if all the fields are filled
@@ -81,7 +81,7 @@ export class RegisterPage implements OnInit {
   submitForm() {
     this.isSubmitted = true;
     if (!this.registerForm.valid) {
-      console.log('Please provide all the required values!');
+      console.log('Geef alle vereiste waarden op!');
       return false;
     } else {
       this.http.post("https://samysah.be/php/api/gebruikers/create.php", this.registerForm.getRawValue()).subscribe(() => this.router.navigate(['/login']));

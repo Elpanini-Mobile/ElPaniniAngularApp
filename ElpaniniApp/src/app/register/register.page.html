@@ -9,30 +9,31 @@
     <ion-card>
       <ion-card-header>
         <ion-card-title>
-          Register
+          Schrijf je in
         </ion-card-title>
       </ion-card-header>
       <ion-card-content>
         <ion-item>
-          <ion-input class="inputTekst" placeholder="username" formControlName="username"></ion-input>
+          <ion-input class="inputTekst" placeholder="Gebruikersnaam" formControlName="username"></ion-input>
         </ion-item>
         <span class="error" *ngIf="isSubmitted && errorControl.username.errors?.pattern">
-          Valid username is required.
+          Gebruikersnaam is vereist.
         </span>
         <ion-item>
           <ion-input class="inputTekst" placeholder="Email" formControlName="email"></ion-input>
         </ion-item>
         <span class="error" *ngIf="isSubmitted && errorControl.email.errors?.pattern">
-          Valid Email is required.
+          Valid Email is vereist.
         </span>
         <ion-item>
-          <ion-input class="inputTekst" placeholder="Passwoord" formControlName="password" type="password"></ion-input>
+          <ion-input class="inputTekst" placeholder="Paswoord" formControlName="password" type="password"></ion-input>
         </ion-item>
         <span class="error" *ngIf="isSubmitted && errorControl.password.errors?.required">
-          Password is required.
+          Paswoord is vereist.
         </span>
         <div class="footer">
-          <ion-button class="register" type="submit" (click)="presentAlert()">Register</ion-button>
+          <ion-button class="register" type="submit" (click)="presentAlert()">Schrijf je in
+          </ion-button>
           <span> Al een account bij ons? <a href="#" routerLink="/login"> Login</a></span>
         </div>
       </ion-card-content>
