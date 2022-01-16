@@ -2,7 +2,18 @@ ion-content {
   --background: darkgoldenrod;
   position: relative;
 }
-
+ion-toolbar {
+  --background: antiquewhite;
+}
+ion-button {
+  --background: #b8860b;
+  --border-radius: 13px;
+  color: #fff;
+}
+button{
+  background:darkgoldenrod;
+  color: antiquewhite;
+}
 .header {
   display: flex;
   justify-content: space-between;

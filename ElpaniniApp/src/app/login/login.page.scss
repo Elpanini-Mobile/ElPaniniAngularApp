@@ -21,7 +21,10 @@ ion-content {
     display: flex;
     justify-content: center;
   }
-
+  button{
+    background:darkgoldenrod;
+    color: antiquewhite;
+  }
   //tital van ioncard --> Welkom...
   ion-card-title {
     color: #000000;

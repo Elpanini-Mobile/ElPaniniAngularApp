@@ -23,7 +23,7 @@ export class ManageSandwichesPage implements OnInit {
   title: any = '';
   price: any = '';
   description: any = '';
-  foto: any = 'https://samysah.be/php/api/broodjes/images/custombroodjeDefault.webp';
+  foto: any = 'https://samysah.be/php/api/broodjes/images/panos.jpg';
   category_id: any = 2;
   brood: Broodje[] = [];
   broodje: Broodje = {
@@ -50,7 +50,7 @@ export class ManageSandwichesPage implements OnInit {
     this.title = '';
     this.price = '';
     this.description = '';
-    this.foto = 'https://samysah.be/php/api/broodjes/images/custombroodjeDefault.webp';
+    this.foto = 'https://samysah.be/php/api/broodjes/images/panos.jpg';
   }
 
   edit(x, index) {

@@ -1,3 +1,4 @@
+/* eslint-disable object-shorthand */
 /* eslint-disable max-len */
 /* eslint-disable prefer-const */
 /* eslint-disable @typescript-eslint/naming-convention */
@@ -32,18 +33,20 @@ export class DetailPage implements OnInit {
     });
   }
 
-   async presentToast() {
+   async presentToast(message, color) {
     const toast = await this.toast.create({
       message: 'Sandwich added to cart',
       mode: 'ios',
       duration: 3000,
       position: 'top',
+      color: color
     });
     toast.present();
+    location.reload();
   }
   addToCart(brood: Broodje)
   {
     this.cartService.addtoCart(brood, 1);
-    this.presentToast();
+    this.presentToast('Sandwich added to cart', 'success');
   }
 }

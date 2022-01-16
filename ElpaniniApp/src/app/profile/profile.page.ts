@@ -31,6 +31,7 @@ export class ProfilePage implements OnInit {
   ionicForm!: FormGroup;
   isSubmitted = false;
   isDisabled: boolean = true;
+  userse: any = JSON.parse(sessionStorage.getItem('UserData'));
 
   //
   users: User[] = [];
@@ -97,6 +98,7 @@ export class ProfilePage implements OnInit {
       color: color
     });
     toast.present();
+    location.reload();
   }
 
   //Enable edit option if the ion inputs are disabled
@@ -105,9 +107,10 @@ export class ProfilePage implements OnInit {
   }
 
   logout() {
-    this.router.navigate(['/home']);
     localStorage.clear();
     sessionStorage.clear();
+    this.router.navigate(['/home']);
+    this.showToast("U bent uitgelogd", "success");
   }
 }
 
